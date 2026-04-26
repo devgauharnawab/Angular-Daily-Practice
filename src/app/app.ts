@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { Signup } from './signup/signup';
+import { ProfileComponent } from './profile/profile.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Login,Signup],
+  imports: [RouterOutlet,Login,Signup,ProfileComponent],
   templateUrl: './app.html',//we can replace the html file when needed
   //template: `<h1>{{age}}</h1>`, //this is inline template
   styleUrl: './app.css'
