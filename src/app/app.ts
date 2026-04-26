@@ -20,4 +20,9 @@ export class App {
   getName(){
     return this.name;
   }
+
+  showAlert(){
+    alert("Hello Gauhar Nawab");
+    console.log("Server Connected");
+  }
 }
