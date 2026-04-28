@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { Signup } from './signup/signup';
 import { ProfileComponent } from './profile/profile.component';
+import { log } from 'node:console';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,12 @@ export class App {
   protected title = 'my-angular-app-day1';
   age = 20;
   name =  "Gauhar Nawab";
+
+  //* Perform Operations for data types in Angular *//
+  //decalare a new property for performing operations
+  email : string = "gauharnawab123@gmail.com";
+  //*we use to store multiple data type in a single property using |
+  data : string | number = 50;
   getName(){
     return this.name;
   }
@@ -24,5 +31,18 @@ export class App {
   showAlert(){
     alert("Hello Gauhar Nawab");
     console.log("Server Connected");
+  }
+
+  //make a function to performing operations on data types
+  performDataTypesOperations(){
+    this.email = "newemail@example.com";
+    console.log("Updated Email: " + this.email);
+    console.log("Data :" + this.data);
+  }
+
+  //* perform operations on Button 
+
+  addNumbers(num1: number, num2: number){
+    console.log(num1 + num2);
   }
 }
