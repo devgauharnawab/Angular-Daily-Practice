@@ -19,6 +19,9 @@ export class App {
   age = 20;
   name =  "Gauhar Nawab";
 
+  //* for counter application
+  count: number = 0;
+
   //* Perform Operations for data types in Angular *//
   //decalare a new property for performing operations
   email : string = "gauharnawab123@gmail.com";
@@ -44,5 +47,27 @@ export class App {
 
   addNumbers(num1: number, num2: number){
     console.log(num1 + num2);
+  }
+
+  //* perform operations for counter application *//
+  handleIncrement(){
+    this.count = this.count + 1;
+  }
+  handleDecrement(){
+    this.count = this.count - 1;
+  }
+  handleReset(){
+    this.count = 0;
+  }
+
+  //this is global method means merge all function inside on mehod
+  performAllOperations(val: string) {
+    if (val === "increment") {
+      this.count = this.count + 1;
+    } else if (val === "decrement") {
+      this.count = this.count - 1;
+    } else {
+      this.count = 0;
+    }
   }
 }

@@ -22,3 +22,18 @@
 <h1>perform add operations</h1>
 
 <button (click) = "addNumbers(10,20)">Sum</button>
+
+
+<!-- Today we create a counter app for demo and learning -->
+
+<div>
+    <h1>Counter App</h1>
+    <div>
+        <h2 class="counter">{{count}}</h2>
+        <div>
+            <button (click)="handleDecrement()" class="btn bg-red">Decrement</button>
+            <button (click)="handleIncrement()" class="btn bg-green">Increment</button>
+            <button (click)="handleReset()" class="btn bg-blue">Reset</button>
+        </div>
+    </div>
+</div>
